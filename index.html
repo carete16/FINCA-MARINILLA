@@ -1,98 +1,230 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Finca en Venta Marinilla cerca al Peñol | 7.000 m² - $1.080M</title>
-    
-    <meta name="description" content="Finca en venta en Marinilla cerca al Peñol. 7.000m², ideal para Airbnb, turismo o inversión. Alta valorización.">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+:root {
+    --primary: #2D5A27;
+    --primary-dark: #1e3d1a;
+    --secondary: #D4AF37;
+    --accent: #E8F5E9;
+    --text: #1A1A1A;
+    --text-light: #666;
+    --white: #ffffff;
+    --bg: #fdfdfd;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
 
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<header>
-    <nav>
-        <div class="logo">MARINILLA<span>PREMIUM</span></div>
-        <div class="nav-links">
-            <a href="#detalles">Detalles</a>
-            <a href="#galeria">Galería</a>
-            <a href="#ubicacion">Ubicación</a>
-            <a href="#contacto" class="btn-primary">Invertir</a>
-        </div>
-    </nav>
-</header>
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
 
-<!-- HERO -->
-<section class="hero" style="background-image: url('input_file_4.jpg');">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1>Invierte en el Oriente Antioqueño</h1>
-        <p>Finca de 7.000 m² cerca al Peñol con alto potencial turístico</p>
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
 
-        <!-- PRECIO PROFESIONAL -->
-        <div class="price-box">
-            <span class="price-label">Precio de inversión</span>
-            <h2 class="price-value">$1.080.000.000</h2>
-            <span class="price-currency">COP</span>
-        </div>
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
 
-        <p><strong>Alta valorización – Oportunidad limitada</strong></p>
-    </div>
-</section>
+.logo {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--primary);
+}
 
-<!-- DETALLES -->
-<section id="detalles">
-    <h2>Características Principales</h2>
-    <ul>
-        <li>7.000 m² de terreno</li>
-        <li>Casa principal en construcción (personalizable)</li>
-        <li>Casa de mayordomo terminada</li>
-        <li>Ubicación estratégica cerca al Peñol</li>
-        <li>Ideal para Airbnb o turismo</li>
-    </ul>
-</section>
+.logo span {
+    font-weight: 300;
+}
 
-<!-- GALERÍA -->
-<section id="galeria">
-    <h2>Galería</h2>
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+}
 
-    <img src="input_file_4.jpg" width="100%">
-    <img src="input_file_0.jpg" width="100%">
-    <img src="input_file_1.jpg" width="100%">
-    <img src="input_file_2.jpg" width="100%">
-    <img src="input_file_3.jpg" width="100%">
-</section>
+.btn-primary {
+    background: var(--primary);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
 
-<!-- UBICACIÓN -->
-<section id="ubicacion">
-    <h2>Ubicación Estratégica</h2>
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
-    <iframe 
-    src="https://www.google.com/maps?q=6.215836,-75.257945&output=embed"
-    width="100%" height="400">
-    </iframe>
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
 
-    <p>Ubicada a minutos del Peñol, en una de las zonas de mayor valorización del Oriente Antioqueño.</p>
-</section>
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
 
-<!-- CONTACTO -->
-<section id="contacto">
-    <h2>Agenda tu visita</h2>
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
 
-    <p>Recibe más información, ubicación exacta y agenda tu visita.</p>
+.hero p {
+    margin-bottom: 20px;
+}
 
-    <a href="https://wa.me/573012722472?text=Hola,%20quiero%20información%20sobre%20la%20finca%20en%20Marinilla%20de%20$1.080M" target="_blank">
-        📲 Hablar por WhatsApp
-    </a>
-</section>
+/* PRECIO */
+.price-box {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 20px;
+    display: inline-block;
+    box-shadow: var(--shadow);
+}
 
-<footer>
-    <p>© 2026 Marinilla Premium</p>
-</footer>
+.price-label {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
 
-</body>
-</html>
+.price-value {
+    font-size: 2.8rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.price-currency {
+    font-size: 1rem;
+}
+
+/* SECCIONES */
+section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* GALERÍA */
+#galeria img {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+/* UBICACIÓN */
+iframe {
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* CONTACTO */
+#contacto a {
+    display: inline-block;
+    margin-top: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE MÓVIL */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        height: 90vh;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .price-box {
+        padding: 20px;
+    }
+
+    .price-value {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    li {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+}
